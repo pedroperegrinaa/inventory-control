@@ -1,3 +1,4 @@
-const nome:string = "Hello World!"
+import app from './app'
 
-console.log(nome)
+app.listen(3333
+  , () => console.log('Server started on https://localhost:3333'))
