@@ -43,28 +43,28 @@ class DrinkController {
   //   }
   // }
 
-  // public async update (req: Request, res: Response): Promise<Response> {
-  //   if (!req.params.id) {
-  //     return res.json(badRequest(new InvalidParamError('Id não indrinkado')))
-  //   }
+  public async update (req: Request, res: Response): Promise<Response> {
+    if (!req.params.id) {
+      return res.json(badRequest(new InvalidParamError('Id não indrinkado')))
+    }
 
-  //   if (!req.body) {
-  //     return res.json(badRequest(new InvalidParamError('Body não pode estar vazio')))
-  //   }
+    if (!req.body) {
+      return res.json(badRequest(new InvalidParamError('Body não pode estar vazio')))
+    }
 
-  //   try {
-  //     let drink
-  //     if (!(drink = await Drink.findById(req.params.id))) {
-  //       return res.json(badRequest(new InvalidParamError('Drink não encontrado')))
-  //     }
+    try {
+      let drink
+      if (!(drink = await Drink.findById(req.params.id))) {
+        return res.json(badRequest(new InvalidParamError('Drink não encontrado')))
+      }
 
-  //     drink = await Drink.findByIdAndUpdate(req.params.id, req.body, { new: true })
+      drink = await Drink.findByIdAndUpdate(req.params.id, req.body, { new: true })
 
-  //     return res.json(drink)
-  //   } catch (error) {
-  //     return res.json(badRequest(new InvalidParamError(error.message)))
-  //   }
-  // }
+      return res.json(drink)
+    } catch (error) {
+      return res.json(badRequest(new InvalidParamError(error.message)))
+    }
+  }
 
   // public async destroy (req: Request, res: Response): Promise<Response> {
   //   if (!req.params.id) {

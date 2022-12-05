@@ -1,16 +1,16 @@
 {
-  "name": "node-typescript",
+  "name": "inventory-control",
   "version": "1.0.0",
-  "description": "template node and typescript",
+  "description": "Inventory control",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/server.ts",
     "build": "sucrase ./src -d .dist --transforms typescript, imports",
     "commit": "cz"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Pedro Peregrina",
+  "license": "MIT",
+  "private": true,
   "devDependencies": {
     "@types/node": "^18.0.1",
     "@typescript-eslint/eslint-plugin": "^5.30.4",
